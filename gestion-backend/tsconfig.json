@@ -4,20 +4,27 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
-    /* Environnement Node */
-    "module": "commonjs",
-    "target": "es2020",
-    "lib": ["esnext"],
-    "types": ["node"],
+    /* Environnement Node avec ES Modules */
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["ES2020"],
 
-    /* Compatibilité ES modules avec CommonJS */
+    /* Compatibilité ES modules */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
 
     /* Outils */
     "sourceMap": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Émission */
+    "declaration": false,
+    "noEmitOnError": false
   },
-  "include": ["src"]
+  "include": ["src/**/*", "generated/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

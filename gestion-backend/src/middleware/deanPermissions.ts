@@ -80,29 +80,9 @@ export const checkDeanAccess = (
           if (targetUserId) {
             const targetUser = await prisma.user.findUnique({
               where: { id: targetUserId },
-              include: {
-                student: {
-                  include: {
-                    enrollments: {
-                      where: { facultyId: facultyId },
-                    },
-                  },
-                },
-                professeur: {
-                  include: {
-                    assignments: {
-                      where: { facultyId: facultyId },
-                    },
-                  },
-                },
-              },
             });
 
             // L'utilisateur a accès s'il est lié à la faculté via student ou professeur
-            hasAccess = !!(
-              targetUser?.student?.enrollments?.length ||
-              targetUser?.professeur?.assignments?.length
-            );
           } else {
             hasAccess = true; // Pour les listes, le filtrage se fait dans le controller
           }
