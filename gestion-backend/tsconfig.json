@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    /* Dossiers */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Environnement Node */
+    "module": "commonjs",
+    "target": "es2020",
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    /* Compatibilité ES modules avec CommonJS */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Outils */
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,94 @@
+.Calque_0 {
+  background-image: url("./ID_CARD.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  width: 300px;
+  height: 477px;
+  /* z-index: 1; */
+}
+
+body {
+  background: #000;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  right: 20px;
+  align-items: center;
+  border: #fff 1px solid;
+  border-radius: 20px 0px;
+  border-color: #e95308;
+}
+
+.logo img {
+  width: 30px;
+  z-index: 34;
+  margin-top: 4px;
+}
+.text {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 10px;
+  text-align: center;
+  color: aliceblue;
+  margin: 0;
+}
+.t1 {
+  font-size: 9px;
+  text-align: center;
+  color: aliceblue;
+  margin: 0;
+}
+
+.photo {
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 108px;
+  left: 84px;
+  width: 132px;
+  height: 132px;
+  background-image: url("./deb6eb33c907ea491e66c2c996855d34.jpg");
+  background-size: contain;
+  background-position: top;
+}
+.nom {
+  position: absolute;
+  color: #080111;
+  text-align: center;
+  top: 140px;
+  margin: 120px 100px;
+}
+.carte {
+  position: absolute;
+  color: #face08;
+  text-align: center;
+  top: 140px;
+  margin: 144px 120px;
+  font-size: 20px;
+}
+
+.info {
+  position: absolute;
+  color: #050400;
+  text-align: left;
+  top: 160px;
+  margin: 144px 70px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.info p {
+  margin: 0;
+}
