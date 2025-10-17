@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://jassage.github.io/app-ujeph/gestion-frontend/",
+  "homepage": "https://jassage.github.io/app-ujeph/gestion-frontend/dist",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
