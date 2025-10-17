@@ -5,13 +5,11 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "npm run db:generate && tsc",
+    "build": "npm run db:generate && npx prisma db push && tsc",
     "start": "node dist/server.js",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:migrate": "prisma migrate deploy",
-    "db:studio": "prisma studio",
-    "clean": "rm -rf dist generated"
+    "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",

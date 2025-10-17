@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const prisma_1 = require("./prisma");
 // Import de toutes les routes générées (adapte les chemins si besoin)
 const studentRoutes_1 = __importDefault(require("./routes/studentRoutes"));
 const professeurRoutes_1 = __importDefault(require("./routes/professeurRoutes"));
@@ -118,7 +119,8 @@ app.use((req, res, next) => {
     }
 });
 // Lancer le serveur
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
-    (0, academicYearService_1.initializeAcademicYear)();
+    await (0, prisma_1.testDatabaseConnection)();
+    await (0, academicYearService_1.initializeAcademicYear)();
 });

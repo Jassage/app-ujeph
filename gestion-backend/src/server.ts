@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import prisma from "./prisma";
+import prisma, { testDatabaseConnection } from "./prisma";
 
 // Import de toutes les routes générées (adapte les chemins si besoin)
 import studentRoutes from "./routes/studentRoutes";
@@ -133,7 +133,8 @@ app.use((req, res, next) => {
 });
 
 // Lancer le serveur
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
-  initializeAcademicYear();
+  await testDatabaseConnection();
+  await initializeAcademicYear();
 });
