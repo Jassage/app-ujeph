@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const messageAttachmentController_1 = require("../controllers/messageAttachmentController");
+const router = (0, express_1.Router)();
+router.get("/", messageAttachmentController_1.getAllMessageAttachments);
+router.get("/:id", messageAttachmentController_1.getMessageAttachmentById);
+router.post("/", messageAttachmentController_1.createMessageAttachment);
+router.put("/:id", messageAttachmentController_1.updateMessageAttachment);
+router.delete("/:id", messageAttachmentController_1.deleteMessageAttachment);
+exports.default = router;

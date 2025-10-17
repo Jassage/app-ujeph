@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const transcriptController_1 = require("../controllers/transcriptController");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const deanPermissions_1 = require("../middleware/deanPermissions");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authenticateToken, deanPermissions_1.deanPermissions);
+router.get("/", transcriptController_1.getAllTranscripts);
+router.get("/:id", transcriptController_1.getTranscriptById);
+router.post("/", transcriptController_1.createTranscript);
+router.put("/:id", transcriptController_1.updateTranscript);
+router.delete("/:id", transcriptController_1.deleteTranscript);
+router.get("/:id/download", transcriptController_1.downloadTranscript);
+exports.default = router;

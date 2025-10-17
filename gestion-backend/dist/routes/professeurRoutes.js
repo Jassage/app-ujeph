@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const professeurController_1 = require("../controllers/professeurController");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const deanPermissions_1 = require("../middleware/deanPermissions");
+const router = express_1.default.Router();
+router.use(auth_middleware_1.authenticateToken, deanPermissions_1.deanPermissions);
+router.post("/", professeurController_1.createProfesseur);
+router.get("/", professeurController_1.getProfesseurs);
+// router.get("/:id", getProfesseurById);
+router.put("/:id", professeurController_1.updateprofesseur);
+router.delete("/:id", professeurController_1.deleteprofesseur);
+router.get("/:id/assignments", professeurController_1.getprofesseurAssignments);
+router.post("/bulk-import", professeurController_1.bulkImportProfesseurs);
+router.patch("/bulk-status", professeurController_1.bulkUpdateStatus);
+exports.default = router;

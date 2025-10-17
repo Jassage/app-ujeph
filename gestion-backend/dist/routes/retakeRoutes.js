@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const retakeController_1 = require("../controllers/retakeController");
+const router = (0, express_1.Router)();
+router.get("/", retakeController_1.getAllRetakes);
+router.get("/:id", retakeController_1.getRetakeById);
+router.post("/", retakeController_1.createRetake);
+router.put("/:id", retakeController_1.updateRetake);
+router.delete("/:id", retakeController_1.deleteRetake);
+exports.default = router;

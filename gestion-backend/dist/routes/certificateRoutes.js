@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const certificateController_1 = require("../controllers/certificateController");
+const router = (0, express_1.Router)();
+router.get("/", certificateController_1.getAllCertificates);
+router.get("/:id", certificateController_1.getCertificateById);
+router.post("/", certificateController_1.createCertificate);
+router.put("/:id", certificateController_1.updateCertificate);
+router.delete("/:id", certificateController_1.deleteCertificate);
+exports.default = router;

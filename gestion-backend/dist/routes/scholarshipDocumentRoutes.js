@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const scholarshipDocumentController_1 = require("../controllers/scholarshipDocumentController");
+const router = (0, express_1.Router)();
+router.get("/", scholarshipDocumentController_1.getAllScholarshipDocuments);
+router.get("/:id", scholarshipDocumentController_1.getScholarshipDocumentById);
+router.post("/", scholarshipDocumentController_1.createScholarshipDocument);
+router.put("/:id", scholarshipDocumentController_1.updateScholarshipDocument);
+router.delete("/:id", scholarshipDocumentController_1.deleteScholarshipDocument);
+exports.default = router;

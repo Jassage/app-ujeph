@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const prerequisiteController_1 = require("../controllers/prerequisiteController");
+const router = (0, express_1.Router)();
+router.get("/", prerequisiteController_1.getAllPrerequisites);
+router.get("/:id", prerequisiteController_1.getPrerequisiteById);
+router.post("/", prerequisiteController_1.createPrerequisite);
+router.put("/:id", prerequisiteController_1.updatePrerequisite);
+router.delete("/:id", prerequisiteController_1.deletePrerequisite);
+exports.default = router;

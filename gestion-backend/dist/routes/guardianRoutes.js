@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const guardianController_1 = require("../controllers/guardianController");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const deanPermissions_1 = require("../middleware/deanPermissions");
+const router = (0, express_1.Router)();
+router.use(auth_middleware_1.authenticateToken, deanPermissions_1.deanPermissions);
+router.get("/", guardianController_1.getAllGuardians);
+router.get("/:id", guardianController_1.getGuardianById);
+router.post("/", guardianController_1.createGuardian);
+router.put("/:id", guardianController_1.updateGuardian);
+router.delete("/:id", guardianController_1.deleteGuardian);
+exports.default = router;
