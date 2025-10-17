@@ -5,10 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "npm run db:generate && npx prisma db push && tsc",
+    "build": "npm install && npx prisma generate && npx prisma db push && npx tsc",
     "start": "node dist/server.js",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
     "clean": "rm -rf dist"
   },
   "keywords": [],
