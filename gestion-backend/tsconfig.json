@@ -1,30 +1,24 @@
 {
   "compilerOptions": {
-    /* Dossiers */
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    /* Environnement Node avec ES Modules */
+    "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "node",
-    "target": "ES2020",
-    "lib": ["ES2020"],
-
-    /* Compatibilité ES modules */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-
-    /* Outils */
-    "sourceMap": true,
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* Émission */
-    "declaration": false,
-    "noEmitOnError": false
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
-  "include": ["src/**/*", "generated/**/*"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
