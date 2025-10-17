@@ -23,7 +23,7 @@ import { fileURLToPath } from "url";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/gestion-frontend/", // ou '/' si c'est le repo principal
+  base: "/jassage.github.io/gestion-frontend", // ou '/' si c'est le repo principal
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
