@@ -5,9 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "npm install && npx prisma generate && npx prisma db push && npx tsc",
+    "build": "npm install && npx prisma generate && npx prisma db push && npx tsc --skipLibCheck",
     "start": "node dist/server.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "build:render": "npm install && npx prisma generate && npx prisma db push && npx tsc --project tsconfig.render.json"
   },
   "keywords": [],
   "author": "",
