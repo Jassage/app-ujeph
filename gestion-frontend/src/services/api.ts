@@ -3,7 +3,7 @@ import { getAuthState } from "@/store/authStore";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://ujeph-api-1.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },

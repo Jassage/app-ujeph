@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jassage.github.io/academie-reprise-generator-gestion-frontend",
+  "homepage": "https://Jassage.github.io/gestion-frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
