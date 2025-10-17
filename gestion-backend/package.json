@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "npm install && npx prisma generate && npx prisma db push && npx tsc --skipLibCheck --noEmitOnError false",
+    "build": "npm install && npx prisma generate && npx prisma db push && npx tsc --project tsconfig.render.json",
     "start": "node dist/server.js",
     "clean": "rm -rf dist"
   },
