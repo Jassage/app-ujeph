@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "./",
+  "homepage": "https://Jassage.github.io/jassage.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
