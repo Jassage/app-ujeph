@@ -23,7 +23,7 @@ import { fileURLToPath } from "url";
 
 export default defineConfig({
   plugins: [react()],
-  base: "app-ujeph",
+  base: "/app-ujeph",
   build: {
     outDir: "dist",
   },
