@@ -3,7 +3,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  HashRouter,
+} from "react-router-dom";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { useDataContext } from "./contexts/DataContext";
@@ -206,9 +212,9 @@ const App = () => {
         <Toaster />
         <Sonner />
         <AppInitializer>
-          <BrowserRouter>
+          <HashRouter>
             <AppContent />
-          </BrowserRouter>
+          </HashRouter>
         </AppInitializer>
       </TooltipProvider>
     </QueryClientProvider>
