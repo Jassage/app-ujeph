@@ -2597,7 +2597,7 @@ const SessionDetails = ({
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-purple-700 dark:text-purple-300">
-                  Unités d'Enseignement
+                  Cours
                 </p>
                 <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">
                   {grades.length}
@@ -2614,7 +2614,7 @@ const SessionDetails = ({
           <TableHeader>
             <TableRow className="bg-gray-50 dark:bg-gray-700">
               <TableHead className="font-semibold dark:text-gray-300">
-                Code UE
+                Code Cours
               </TableHead>
               <TableHead className="font-semibold dark:text-gray-300">
                 Intitulé

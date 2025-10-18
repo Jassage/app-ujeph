@@ -606,7 +606,7 @@ export const StudentCardGenerator = () => {
                   </div>
                   {/* Signature après le niveau */}
                   <div className="mt-4 ml-8 mr-16 pt-2">
-                    <img src="../../public/signature.png" alt="Signature" />
+                    <img src="./signature.png" alt="Signature" />
                     <p className="text-xs text-center border-t  border-gray-300">
                       Signature autorisée
                     </p>
@@ -683,7 +683,7 @@ export const StudentCardGenerator = () => {
                     </div>
                   </div>
                   <div className=" ml-8 mr-8">
-                    <img src="../../public/signature.png" alt="Signature" />
+                    <img src="./signature.png" alt="Signature" />
                     <p className="text-xs text-center border-t  border-gray-300">
                       Signature autorisée
                     </p>
