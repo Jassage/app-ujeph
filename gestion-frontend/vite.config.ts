@@ -23,10 +23,8 @@ import { fileURLToPath } from "url";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/app-ujeph",
-  build: {
-    outDir: "dist",
-  },
+  base: "/app-ujeph/gestion-frontend",
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
