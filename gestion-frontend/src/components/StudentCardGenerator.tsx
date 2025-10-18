@@ -516,7 +516,7 @@ export const StudentCardGenerator = () => {
                   ref={frontCardRef}
                   className="w-[300px] h-[477px] rounded-2xl shadow-2xl overflow-hidden relative mt-1 p-4"
                   style={{
-                    backgroundImage: "url('../../public/ID_CARD.png')",
+                    backgroundImage: "url('./ID_CARD.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -526,7 +526,7 @@ export const StudentCardGenerator = () => {
                   <div className="flex items-center justify-center border border-orange-500 rounded-tl-xl rounded-br-xl mx-1 mt-3 px-0 py-1 pt-1 backdrop-blur-sm">
                     <div className="w-14 h-10 flex items-center justify-center mr-0 pl-1">
                       <img
-                        src="../../public/logo.png"
+                        src="./logo.png"
                         alt="Logo UJEPH"
                         className="w-full object-contain"
                         crossOrigin="anonymous"

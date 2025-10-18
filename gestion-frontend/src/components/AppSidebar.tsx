@@ -103,7 +103,7 @@ export function AppSidebar({ activeTab, onTabChange }: AppSidebarProps) {
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 text-white">
             {/* <GraduationCap className="h-6 w-6" /> */}
             <img
-              src="/logo.png"
+              src="./logo.png"
               alt="UJEPH Logo"
               className="h-10 w-10 object-contain"
             />
