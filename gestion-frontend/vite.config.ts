@@ -23,7 +23,7 @@ import { fileURLToPath } from "url";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./app-ujeph/gestion-frontend", // ou '/' si c'est le repo principal
+  base: "./",
   build: {
     outDir: "dist",
   },
