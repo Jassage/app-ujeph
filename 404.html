@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <script>
+      // Redirige vers la page d'accueil avec le hash
+      const path = window.location.pathname + window.location.search;
+      if (path !== "/" && !path.includes(".")) {
+        window.location.href = "/#" + path;
+      } else {
+        window.location.href = "/";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirection...</p>
+  </body>
+</html>
